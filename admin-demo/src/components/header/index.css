@@ -1,0 +1,44 @@
+.Header {
+  height: 80px;
+  background-color: #fff;
+}
+.Header .Header-top {
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+  padding-right: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.Header .Header-top span {
+  margin-right: 15px;
+}
+.Header .Header-bottom {
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+}
+.Header .Header-bottom .Header-bottom-left {
+  flex: 4;
+  font-size: 20px;
+  font-weight: 300;
+  padding-left: 150px;
+  position: relative;
+}
+.Header .Header-bottom .Header-bottom-left::after {
+  content: '';
+  position: absolute;
+  top: 90%;
+  transform: translateX(-100%);
+  border-top: 20px solid #fff;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+}
+.Header .Header-bottom .Header-bottom-right {
+  flex: 6;
+  text-align: right;
+  padding-right: 20px;
+}
+.Header .Header-bottom .Header-bottom-right span {
+  padding: 0 10px;
+}
