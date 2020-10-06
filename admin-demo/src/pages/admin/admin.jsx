@@ -12,6 +12,7 @@ import role from '../roles/role'
 import bar from '../charts/bar'
 import line from '../charts/line'
 import pie from '../charts/pie'
+import NotFound from '../../pages/not-found/not-found'
 const { Footer, Sider, Content } = Layout;
 export default class Admin extends Component{
   render() {
@@ -28,6 +29,7 @@ export default class Admin extends Component{
           <Header>Header</Header>
           <Content style={{margin: 20,backgroundColor:'#fff'}}>
             <Switch>
+              <Redirect exact from='/' to='/home'/>
               <Route path='/home' component={Home}/>
               <Route path='/category' component={category}/>
               <Route path='/product' component={product}/>
@@ -36,7 +38,7 @@ export default class Admin extends Component{
               <Route path='/charts/bar' component={bar}/>
               <Route path='/charts/line' component={line}/>
               <Route path='/charts/pie' component={pie}/>
-              <Redirect to='/home'/>
+              <Route component={NotFound}/>
             </Switch>
           </Content>
           <Footer style={{textAlign: "center"}}>推荐使用谷歌浏览器，可以获得更佳页面操作体验</Footer>
